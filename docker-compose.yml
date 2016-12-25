@@ -1,0 +1,21 @@
+php:
+    image: php:fpm-alpine
+
+    # create and attach volume with website data
+    volumes:
+        - ./data:/data
+        - ./docker/php.ini:/usr/local/etc/php-fpm.d/php.ini
+
+web:
+    image: nginx:stable-alpine
+    ports:
+        - "8181:80"
+
+    # create and attach volume with website data and config files
+    volumes:
+        - ./data:/data
+        - ./docker/default.conf:/etc/nginx/conf.d/default.conf
+
+    # link php with nginx
+    links:
+        - php
