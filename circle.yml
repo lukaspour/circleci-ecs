@@ -22,12 +22,12 @@ test:
   pre:
     - docker-compose up -d
 
-deployment:
-  prod:
-    branch: production
-    commands:
-    #  - bash ./deploy_production.sh
-  dev:
-    branch: master
-    commands:
-    #  - bash ./deploy_development.sh
+#deployment:
+#  prod:
+#    branch: production
+#    commands:
+#      - bash ./deploy_production.sh
+#  dev:
+#    branch: master
+#    commands:
+#      - bash ./deploy_development.sh
