@@ -1,2 +1,2 @@
 # circleci-ecs
-how to deploy circleci to ecs
+how to deploy from github through circleci to ecs
