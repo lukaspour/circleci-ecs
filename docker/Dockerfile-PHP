@@ -1,0 +1,5 @@
+FROM php:fpm-alpine
+
+ADD ./data /data
+ADD ./docker/php.ini /usr/local/etc/php-fpm.d/php.ini
+
