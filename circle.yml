@@ -4,10 +4,10 @@ machine:
    #AWS_REGION: "eu-central-1"
    #AWS_PROJECT_NAME: "dev-robeeto"
    DOCKER_PORT: "8181"
-   - if [ $CIRCLE_BRANCH = 'master' ]; then AWS_REGION: "eu-central-1"; fi
-   - if [ $CIRCLE_BRANCH = 'master' ]; then AWS_PROJECT_NAME: "dev-robeeto"; fi
-   - if [ $CIRCLE_BRANCH = 'production' ]; then AWS_REGION: "eu-west-1"; fi
-   - if [ $CIRCLE_BRANCH = 'production' ]; then AWS_PROJECT_NAME: "prod-robeeto"; fi
+   if [ $CIRCLE_BRANCH = 'master' ]; then AWS_REGION: "eu-central-1"; fi
+   if [ $CIRCLE_BRANCH = 'master' ]; then AWS_PROJECT_NAME: "dev-robeeto"; fi
+   if [ $CIRCLE_BRANCH = 'production' ]; then AWS_REGION: "eu-west-1"; fi
+   if [ $CIRCLE_BRANCH = 'production' ]; then AWS_PROJECT_NAME: "prod-robeeto"; fi
 
 
  services:
